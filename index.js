@@ -1,5 +1,5 @@
-import {default as Catalog } from './modules/catalog.js';
-import {loadPage, showDefaultTab, showDate} from './modules/nav.js';
+import Catalog from './modules/catalog.js';
+import { loadPage, showDefaultTab, showDate } from './modules/nav.js';
 
 let catalog = null;
 

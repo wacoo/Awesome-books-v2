@@ -25,7 +25,7 @@ export default class Catalog {
         const button = event.target;
         const parent = button.parentNode;
         parent.parentNode.removeChild(parent);
-        //console.log(this.books[idx]);
+        // console.log(this.books[idx]);
         this.removeBook(idx);
         this.saveBooks();
         if (i > 0) {
@@ -59,7 +59,6 @@ export default class Catalog {
       book.author = form.elements.author.value;
       form.elements.title.value = '';
       form.elements.author.value = '';
-      console.log(book);
       this.addBook(book);
       this.displayData(i);
       this.saveBooks();
@@ -83,7 +82,7 @@ export default class Catalog {
       if (Array.isArray(objData)) {
         this.books = objData;
       } else {
-        console.error('Data retrieved from local storage is not an array!');
+        throw new Error('Data retrieved from local storage is not an array!');
       }
     }
   }
