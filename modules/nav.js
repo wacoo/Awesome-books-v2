@@ -1,6 +1,14 @@
-import { add, list, contact, btnList, btnAdd, btnContact, infoDisplay, displaDate } from "../index.js";
+const add = document.querySelector('.wrapper_frm');
+const list = document.querySelector('.wrapper_list');
+const contact = document.querySelector('.wrapper_contact');
+const displaDate = document.querySelector('.date_cls');
+//Buttons
+const btnList = document.getElementById('btn_list');
+const btnAdd = document.getElementById('btn_add');
+const btnContact = document.getElementById('btn_contact');
+const infoDisplay = document.querySelector('small');
 
-function loadPage() {
+const loadPage = () => {
     btnList.addEventListener('click', () => {
         add.style.display = 'none';
         list.style.display = 'block';
@@ -30,16 +38,16 @@ function loadPage() {
     });
 }
 
-function showDefaultTab() {
+const showDefaultTab = () => {
     add.style.display = 'none';
     list.style.display = 'block';
     contact.style.display = 'none';
     btnList.className = 'active';
 }
 
-function showDate() {
+const showDate = () => {
     const newDate = new Date();
     displaDate.innerHTML = newDate;
 }
 
-export { loadPage, showDefaultTab, showDate};
+export { loadPage, showDefaultTab, showDate };
